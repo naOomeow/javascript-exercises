@@ -1,11 +1,8 @@
 const leapYears = function(year) {
-    let isLeapYear = year % 4 === 0;
-    let isCentury = year % 100 === 0;
-    let isDivBy400 = year % 400 === 0;
-
-    if (isLeapYear) {
-        return true;
-    }
+    if (year % 400 === 0) { return true };
+    if (year % 100 === 0) { return false };
+    if (year % 4 === 0) { return true };
+    return false;
 };
 
 // Do not edit below this line
